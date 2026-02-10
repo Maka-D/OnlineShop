@@ -1,0 +1,12 @@
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\bin\Debug\net10.0\Orders.Infrastructure.deps.json
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\bin\Debug\net10.0\Orders.Infrastructure.dll
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\bin\Debug\net10.0\Orders.Infrastructure.pdb
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\Orders.Infrastructure.csproj.AssemblyReference.cache
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\Orders.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\Orders.Infrastructure.AssemblyInfoInputs.cache
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\Orders.Infrastructure.AssemblyInfo.cs
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\Orders.Infrastructure.csproj.CoreCompileInputs.cache
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\Orders.Infrastructure.dll
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\refint\Orders.Infrastructure.dll
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\Orders.Infrastructure.pdb
+E:\projects\test-project\OnlineShop\Orders.Infrastructure\obj\Debug\net10.0\ref\Orders.Infrastructure.dll

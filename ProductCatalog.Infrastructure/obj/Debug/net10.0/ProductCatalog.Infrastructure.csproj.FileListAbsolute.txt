@@ -1,0 +1,15 @@
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\bin\Debug\net10.0\ProductCatalog.Infrastructure.deps.json
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\bin\Debug\net10.0\ProductCatalog.Infrastructure.dll
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\bin\Debug\net10.0\ProductCatalog.Infrastructure.pdb
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\bin\Debug\net10.0\ProductCatalog.Domain.dll
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\bin\Debug\net10.0\ProductCatalog.Domain.pdb
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ProductCatalog.Infrastructure.csproj.AssemblyReference.cache
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ProductCatalog.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ProductCatalog.Infrastructure.AssemblyInfoInputs.cache
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ProductCatalog.Infrastructure.AssemblyInfo.cs
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ProductCatalog.Infrastructure.csproj.CoreCompileInputs.cache
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ProductC.710271C5.Up2Date
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ProductCatalog.Infrastructure.dll
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\refint\ProductCatalog.Infrastructure.dll
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ProductCatalog.Infrastructure.pdb
+E:\projects\test-project\OnlineShop\ProductCatalog.Infrastructure\obj\Debug\net10.0\ref\ProductCatalog.Infrastructure.dll
