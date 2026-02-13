@@ -76,9 +76,14 @@ namespace ProductCatalog.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SKU")
+                        .IsUnique();
+
                     b.ToTable("Products", "catalog", t =>
                         {
                             t.HasCheckConstraint("CK_Product_Price_Positive", "[Price] >= 0");
+
+                            t.HasCheckConstraint("CK_Product_StockQuantity_Positive", "[StockQuantity] >= 0");
                         });
                 });
 #pragma warning restore 612, 618

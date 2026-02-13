@@ -13,10 +13,12 @@ public class ProductMapp : BaseEntityConfiguration<Product>
         builder.Property(p => p.Name)
             .HasColumnType("NVARCHAR(50)")             
             .IsRequired();
-
+        
         builder.Property(p => p.SKU)
             .HasColumnType("NVARCHAR(20)")
             .IsRequired();
+        
+        builder.HasIndex(p => p.SKU).IsUnique();
 
         builder.ComplexProperty(p => p.Price, b =>
         {
@@ -34,5 +36,6 @@ public class ProductMapp : BaseEntityConfiguration<Product>
             .IsRequired();
         
         builder.ToTable(t => t.HasCheckConstraint("CK_Product_Price_Positive", "[Price] >= 0"));
+        builder.ToTable(t => t.HasCheckConstraint("CK_Product_StockQuantity_Positive", "[StockQuantity] >= 0"));
     }
 }

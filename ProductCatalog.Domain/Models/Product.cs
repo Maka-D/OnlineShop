@@ -1,4 +1,5 @@
 ﻿using ProductCatalog.Domain.CustomExceptions;
+using Shared.Models;
 
 namespace ProductCatalog.Domain.Models;
 
@@ -10,18 +11,31 @@ public class Product :BaseModel
     public required int StockQuantity  { get; set; }
     public required bool IsActive  { get; set; }
     
-    public void DecreaseStockQuantity(int quantity)
+    public Result<bool> DecreaseStockQuantity(int quantity)
     {
         if (quantity <= 0)
-            throw new NegativeStockQuantityException();
+            return Result<bool>.Failure("Quantity must be greater than zero");
                 
         if (!IsActive) 
-            throw new InactiveProductStockDecreaseException();
+            return Result<bool>.Failure("Product is not active");
 
         if (StockQuantity - quantity < 0)
-            throw new NotEnoughStockAmountException();
+            return Result<bool>.Failure("Not Enough Stock");
     
         StockQuantity -= quantity;
+        return Result<bool>.Success(true);
+    }
+    
+    public Result<bool> IncreaseStockQuantity(int quantity)
+    {
+        if (quantity <= 0)
+            return Result<bool>.Failure("Quantity must be greater than zero");
+                
+        if (!IsActive) 
+            return Result<bool>.Failure("Product is not active");
+    
+        StockQuantity += quantity;
+        return Result<bool>.Success(true);
     }
 }
 
