@@ -1,4 +1,4 @@
-﻿namespace ProductCatalog.Domain.CustomExceptions;
+﻿namespace Shared.Exceptions;
 
 public class BaseCustomException :Exception
 {

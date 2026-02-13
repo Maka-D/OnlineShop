@@ -1,4 +1,4 @@
-﻿namespace ProductCatalog.Domain.Models;
+﻿namespace Shared.Models;
 
 public class BaseModel
 {

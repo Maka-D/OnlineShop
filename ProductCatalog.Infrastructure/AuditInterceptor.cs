@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using ProductCatalog.Domain.Models;
+using Shared.Models;
 
 namespace ProductCatalog.Infrastructure;
 

@@ -15,7 +15,7 @@ public class ProductCatalogDbContext :DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.HasDefaultSchema("catalog");
+        modelBuilder.HasDefaultSchema("Catalog");
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProductCatalogDbContext).Assembly);
     }
 }
