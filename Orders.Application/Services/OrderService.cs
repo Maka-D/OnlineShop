@@ -90,6 +90,7 @@ public class OrderService : IOrderService
             return Result<bool>.Failure(ex.Message);
         }
 
+        _orderRepository.Update(order);
         await _unitOfWork.SaveChangesAsync();
 
         var itemsToReleaseStock = order.Items.Select(i => new StockUpdate()
@@ -128,6 +129,7 @@ public class OrderService : IOrderService
             return Result<bool>.Failure(ex.Message);
         }
 
+        _orderRepository.Update(order);
         await _unitOfWork.SaveChangesAsync();
 
         var itemsToDecreaseStock = order.Items.Select(i => new StockUpdate()

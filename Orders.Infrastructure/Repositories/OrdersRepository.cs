@@ -13,9 +13,9 @@ public class OrdersRepository : IOrdersRepository
         _dbContext = dbContext;
     }
 
-    public async Task<IEnumerable<Order>> GetUserOrdersAsync(string userId, int pageSize, int pageNumber)
+    public async Task<IEnumerable<Order>> GetUserOrdersAsync(string userId, int pageNumber, int pageSize)
     {
-        return await _dbContext.Orders
+       return await _dbContext.Orders
             .Where(o => o.UserId == userId)
             .Include(o => o.Items)
             .OrderByDescending(o => o.CreatedAt)
@@ -28,7 +28,10 @@ public class OrdersRepository : IOrdersRepository
 
     public async Task<Order?> GetByIdAsync(int id)
     {
-        return await _dbContext.Orders.FindAsync(id);
+        return await _dbContext.Orders.Where(o => o.Id == id)
+            .Include(o => o.Items)
+            .AsSplitQuery()
+            .SingleAsync();
     }
 
     public async Task<bool> ExistsByIdempotencyKeyAsync(Guid key)
@@ -39,5 +42,10 @@ public class OrdersRepository : IOrdersRepository
     public void Add(Order order)
     {
         _dbContext.Orders.Add(order);
+    }
+    
+    public void Update(Order order)
+    {
+        _dbContext.Update(order);
     }
 }

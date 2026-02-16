@@ -144,15 +144,16 @@ public class ProductCatalogService :IProductCatalogService
                 }
 
                 product.DecreaseStockQuantity(item.Quantity);
+                _productCatalogRepository.Update(product);
             }
 
-            await _unitOfWork.SaveChangesAsync();
             await _unitOfWork.CommitTransactionAsync();
         
-            return Result<bool>.Success();
+            return Result<bool>.Success(true);
         }
-        catch (DbUpdateConcurrencyException)
+        catch (DbUpdateConcurrencyException ex)
         {
+            await _unitOfWork.RollbackTransactionAsync();
             return Result<bool>.Failure("Concurrency conflict: Stock was updated by another user");
         }
         catch (Exception ex)
@@ -183,12 +184,17 @@ public class ProductCatalogService :IProductCatalogService
                 }
 
                 product.IncreaseStockQuantity(item.Quantity);
+                _productCatalogRepository.Update(product);
             }
 
-            await _unitOfWork.SaveChangesAsync();
             await _unitOfWork.CommitTransactionAsync();
         
-            return Result<bool>.Success();
+            return Result<bool>.Success(true);
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            await _unitOfWork.RollbackTransactionAsync();
+            return Result<bool>.Failure("Concurrency conflict: Stock was updated by another user");
         }
         catch (Exception ex)
         {

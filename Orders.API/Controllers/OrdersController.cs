@@ -27,8 +27,8 @@ public class OrdersController :BaseController
         return HandleResult(result);
     }
 
-    [HttpPost("cancel-order/{id}")]
-    public async Task<IActionResult> CancelOrder(int id)
+    [HttpPost("cancel-order")]
+    public async Task<IActionResult> CancelOrder([FromQuery]int id)
     {
         var userId = UserHelper.GetUserId(HttpContext.User);
         var result = await _orderService.CancelOrderAsync(id, userId);
@@ -45,8 +45,8 @@ public class OrdersController :BaseController
         return HandleResult(result);
     }
 
-    [HttpGet("get/order-details/{id}")]
-    public async Task<IActionResult> GetDetails(int id)
+    [HttpGet("get/order-details")]
+    public async Task<IActionResult> GetDetails([FromQuery]int id)
     {
         var userId = UserHelper.GetUserId(HttpContext.User);
         var result = await _orderService.GetOrderDetailsAsync(id, userId);
@@ -54,11 +54,11 @@ public class OrdersController :BaseController
         return HandleResult(result);
     }
     
-    [HttpPost("confirm-order/{id}")]
-    public async Task<IActionResult> ConfirmOrder(int id)
+    [HttpPost("confirm-order")]
+    public async Task<IActionResult> ConfirmOrder([FromQuery]int id)
     {
         var userId = UserHelper.GetUserId(HttpContext.User);
-        var result = await _orderService.CancelOrderAsync(id, userId);
+        var result = await _orderService.ConfirmOrderAsync(id, userId);
         
         return HandleResult(result);
     }
