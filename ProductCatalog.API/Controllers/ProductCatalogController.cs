@@ -61,7 +61,7 @@ public class ProductCatalogController :BaseController
     }
 
     [Authorize(Roles = "User")]
-    [HttpPatch("update/decrease-stock")]
+    [HttpPost("update/decrease-stock")]
     public async Task<IActionResult> DecreaseStock([FromBody] IEnumerable<ProductStockUpdate> request)
     {
         var result = await _productService.DecreaseProductStockAsync(request);

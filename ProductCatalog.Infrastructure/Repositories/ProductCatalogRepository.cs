@@ -47,11 +47,6 @@ public class ProductCatalogRepository :IProductCatalogRepository
     {
         _dbContext.Update(product);
     }
-
-    public void Delete(int productId)
-    {
-        _dbContext.Remove(productId);
-    }
     
     public async Task<IEnumerable<Product>> GetProductsByIdsAsync(IEnumerable<int> ids)
     {
@@ -61,7 +56,6 @@ public class ProductCatalogRepository :IProductCatalogRepository
         }
 
         return await _dbContext.Products
-            .AsNoTracking()
             .Where(p => ids.Contains(p.Id))
             .ToListAsync();
     }

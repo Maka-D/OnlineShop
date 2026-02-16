@@ -20,10 +20,7 @@ public class ProductCatalogClient :IProductCatalogClient
 
         try 
         {
-            var productsResponse = await _client.GetAsync(url);
-            var responseString = await productsResponse.Content.ReadAsStringAsync();
-            var products = JsonSerializer.Deserialize<ProductList>(responseString);
-            return products ?? new ProductList();
+            return await _client.GetFromJsonAsync<ProductList>(url);
         }
         catch (Exception ex)
         {

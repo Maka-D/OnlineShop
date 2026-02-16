@@ -11,6 +11,5 @@ public interface IProductCatalogRepository
     public Task<Product?> GetBySKU(string sku);
     public void Create(Product product);
     public void Update(Product product);
-    public void Delete(int productId);
     Task<IEnumerable<Product>> GetProductsByIdsAsync(IEnumerable<int> ids);
 }
